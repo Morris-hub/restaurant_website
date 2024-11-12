@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Étoile Dorée - Exquisites 3-Sterne-Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <style>
+        /* Grundlegende Stile */
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Navbar-Stile */
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+        header.scrolled {
+            background: rgba(26, 26, 26, 0.9);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 28px;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        header li {
+            padding: 0 20px;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        header .highlight, header .current a {
+            color: #d4af37;
+        }
+        header a:hover {
+            color: #d4af37;
+        }
+        /* Hauptinhalt-Stile */
+        main {
+            padding-top: 80px;
+            min-height: calc(100vh - 80px - 100px);
+        }
+        .form-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        h2 {
+            font-family: "Cormorant Garamond", serif;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        input[type="submit"] {
+            background-color: #d4af37;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #b8960c;
+        }
+        /* Footer-Stile */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .stars {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">L'Étoile Dorée</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Reservierung</h2>
+                <form action="#" method="POST">
+                    <div>
+                        <!-- Fehlende form-Tags -->
+                        <label for="Essen">Essen</label>
+                        <input type="text" name="Essen" placeholder="Name" />
+                      </div>
+                      <div>
+                        <!-- Falsche Verwendung des for-Attributs und fehlende ID im input -->
+                        <label for="Essen">Essen</label>
+                        <input name="Tag" placeholder="E-Mail" />
+                        <!-- type ist nicht spezifiziert -->
+                      </div>
+                      <div>
+                        <!-- Fehlende eindeutige ID -->
+                        <label for="Essen">Essen</label>
+                        <input type="text" name="Uhrzeit" />
+                      </div>
+                      <div>
+                        <!-- Fehlende eindeutige Beschriftung und kein Formular-Tag -->
+                        <input type="submit" name="submit" value="Absenden" />
+                      </div>
+          
+                      <div>
+                        <label for="guests">Anzahl der Gäste</label>
+                        <select id="guests" name="guests" required>
+                          <option value="">Bitte wählen</option>
+                          <option value="1">1 Person</option>
+                          <option value="2">2 Personen</option>
+                          <option value="3">3 Personen</option>
+                          <option value="4">4 Personen</option>
+                          <option value="5">5 Personen</option>
+                          <option value="6">6 Personen</option>
+                          <option value="7+">7 oder mehr Personen</option>
+                        </select>
+                      </div>
+                      <div>
+                        <input type="submit" value="Reservierung absenden" />
+                      </div>
+                    <div>
+                        <label for="guests">Anzahl der Gäste</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                            <option value="5">5 Personen</option>
+                            <option value="6">6 Personen</option>
+                            <option value="7+">7 oder mehr Personen</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit" value="Reservierung absenden" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 L'Étoile Dorée. Alle Rechte vorbehalten.</p>
+            <div class="stars">★★★</div>
+            <p>Gourmetstraße 1, 10115 Berlin | Tel: +49 30 1234567</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-Effekt für Navbar -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

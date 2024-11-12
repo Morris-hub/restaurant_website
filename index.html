@@ -1,0 +1,252 @@
+<!DOCTYPE>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile Dorée - Exquisites 3-Sterne-Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+        header.scrolled {
+            background: rgba(26, 26, 26, 0.9);
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        header li {
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 28px;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #d4af37;
+        }
+        header a:hover {
+            color: #d4af37;
+        }
+        #showcase {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/placeholder.svg?height=1080&width=1920') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #showcase .content {
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #d4af37;
+        }
+        #showcase h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 60px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        #showcase p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        #showcase .button {
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            border: #d4af37 1px solid;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        #showcase .button:hover {
+            background: #d4af37;
+            color: #1a1a1a;
+        }
+        .stars {
+            color: #d4af37;
+            font-size: 24px;
+            letter-spacing: 10px;
+            margin: 20px 0;
+        }
+        #menu {
+            padding: 80px 0;
+            background: #fff;
+        }
+        #menu h2 {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+        .menu-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .menu-item {
+            width: 30%;
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        .menu-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .menu-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        .menu-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        footer {
+            padding: 40px 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+        }
+        footer p {
+            margin: 10px 0;
+        }
+        @media(max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            header li {
+                padding: 10px 0;
+            }
+            #showcase h1 {
+                font-size: 40px;
+            }
+            .menu-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">L'Étoile Dorée</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Home</a></li>
+                    <li><a href="#menu">Menü</a> <html></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="content">
+            <h1>L'Étoile Dorée</h1>
+            <div class="stars">★★★</div>
+            <p>Erleben Sie kulinarische Perfektion in unserem preisgekrönten Restaurant</p>
+            <a href="form.html" class="button">Reservieren Sie Ihren Tisch</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Unser exquisites Menü</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Vorspeisen">
+                    <h3>Vorspeisen</h3>
+                    <p>Feinste Auswahl an saisonalen Vorspeisen, kreiert von unserem Chefkoch mit Liebe zum Detail.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Hauptgerichte">
+                    <h3>Hauptgerichte</h3>
+                    <p>Exquisite Hauptgerichte, zubereitet mit den besten lokalen und internationalen Zutaten für ein unvergessliches Geschmackserlebnis.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Desserts">
+                    <h3>Desserts</h3>
+                    <p>Verführerische Dessertkreationen, die Ihre Geschmackssinne verzaubern und Ihren Besuch perfekt abrunden werden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 L'Étoile Dorée. Alle Rechte vorbehalten.</p>
+            <div class="stars">★★★</div>
+            <p>Gourmetstraße 1, 10115 Berlin | Tel: +49 30 1234567</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
